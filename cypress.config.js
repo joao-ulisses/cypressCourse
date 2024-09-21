@@ -1,8 +1,8 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("Cypress");
 
 module.exports = defineConfig({
   env: {
-    url: 'https://rahulshettyacademy.com',
+    url: 'https://rahulshettyacademy.com/seleniumPractise/',
   },
   e2e: {
     setupNodeEvents(on, config) {
