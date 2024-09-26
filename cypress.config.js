@@ -1,10 +1,9 @@
 const { defineConfig } = require("Cypress");
 
 module.exports = defineConfig({
-  env: {
-    url: 'https://rahulshettyacademy.com/seleniumPractise/',
-  },
+  defaultCommandTimeout: 6000,
   e2e: {
+    baseUrl: 'https://rahulshettyacademy.com/',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

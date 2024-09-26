@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
- 
+
 describe('Handling Child Windows', function () {
     // it('Should handle child window', function() {
-    //     cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+    //     cy.visit('/AutomationPractice/')
 
     //     // Open in a new tank removing the "_blank" attribute from the button
     //     cy.get('#opentab').invoke('removeAttr', 'target').click()

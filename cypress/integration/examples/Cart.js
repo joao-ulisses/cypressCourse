@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
- 
+
 describe('Cart Test Suite', function () {
     it('Add item to cart and proceed', function() {
-        cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
+        cy.visit("/seleniumPractise/#/")
         // Search item
         cy.get('.search-keyword').type('ca')
         cy.wait(2000)
@@ -18,6 +18,6 @@ describe('Cart Test Suite', function () {
         cy.get('.cart-icon > img').click()
         cy.contains('PROCEED TO CHECKOUT').click()
         cy.contains('Place Order').click()
-        
+
     })
 })

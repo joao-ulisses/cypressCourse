@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
- 
+
 describe('My First Test Suite', function () {
     it('My first test case', function() {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+        cy.visit("/AutomationPractice/")
 
         cy.get('tr td:nth-child(2)').each(($el, index, $list) => {
             const text = $el.text()
