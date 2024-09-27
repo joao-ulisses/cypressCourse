@@ -13,7 +13,7 @@ describe('Handling Child Windows', function () {
     //     })
     // })
     it('Child windows', function() {
-        cy.visit(Cypress.env("url")+'/AutomationPractice/')
+        cy.visit('/AutomationPractice/')
 
         // Open in a new tank removing the "_blank" attribute from the button
         cy.get('#opentab').then(function(el){

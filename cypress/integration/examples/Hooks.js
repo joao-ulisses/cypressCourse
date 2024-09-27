@@ -24,6 +24,21 @@ describe('Hooks Test Suite', function () {
             cy.selectProduct(element);
         })
         productPage.getCheckoutButton().click();
+        var sum = 0;
+        cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
+            const amount = $el.text();
+            var res = amount.split(" ")[1];
+            res = res.trim();
+            sum = Number(sum) + Number(res);
+        }).then(() => {
+            cy.log(sum);
+        });
+        cy.get('h3 strong').then((element) => {
+            const amount = element.text();
+            var res = amount.split(" ")[1];
+            var total = res.trim();
+            expect(Number(total)).to.equal(sum);
+        })
         cy.contains('Checkout').click();
         cy.get('#country').type('India');
         cy.get('.suggestions > ul > li > a').click();

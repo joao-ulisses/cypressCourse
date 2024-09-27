@@ -10,6 +10,7 @@
   "description": "",
   "devDependencies": {
     "cypress": "^13.10.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }

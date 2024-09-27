@@ -1,12 +1,18 @@
 const { defineConfig } = require("Cypress");
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 6000,
+  defaultCommandTimeout: 10000,
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'https://rahulshettyacademy.com/',
+    video: true,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
     specPattern: 'cypress/integration/examples/*.js'
+  },
+  retries: {
+    runMode: 1,
+    openMode: 1
   },
 });
