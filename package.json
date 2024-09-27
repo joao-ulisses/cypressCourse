@@ -15,5 +15,9 @@
     "cypress": "^13.10.0",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "latest"
   }
 }
