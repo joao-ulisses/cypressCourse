@@ -1,10 +1,21 @@
 const { defineConfig } = require("cypress");
 const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 const { preprocessor } = require("@badeball/cypress-cucumber-preprocessor/browserify");
+const excelToJson = require("convert-excel-to-json");
+const fs = require("fs");
 
 async function setupNodeEvents(on, config) {
   await addCucumberPreprocessorPlugin(on, config);
   on("file:preprocessor", preprocessor(config));
+
+  on('task', {
+    excelToJsonConverter(filePath) {
+      const result = excelToJson({
+        source: fs.readFileSync(filePath)
+      });
+      return result;
+    }
+  })
 
   // require('cypress-mochawesome-reporter/plugin')(on);
 
